@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo_placeholder.svg?sanitize=1" alt="Laboratory" />
+  <img src="assets/logo_placeholder.svg?sanitize=1" alt="Laboratory" width="100" height="100" />
 </p>
 
 <h2 align="center">Laboratory</h2>
