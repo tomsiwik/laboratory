@@ -1,11 +1,14 @@
-.DEFAULT_GOAL := setup
+.PHONY: install compile setup clean help
+
+all: setup
 
 install:
-	gh extension install github/gh-aw --upgrade
+	gh extension install github/gh-aw
+	gh extension upgrade github/gh-aw
 
 compile:
 	gh aw compile
-	cd workflows && gh aw compile
+	gh aw compile --dir workflows
 
 setup: install compile
 
@@ -13,7 +16,8 @@ clean:
 	gh extension remove github/gh-aw || true
 
 help:
-	@echo "make install  - Install gh-aw extension"
-	@echo "make compile  - Compile all workflows"
-	@echo "make setup    - Install + compile"
-	@echo "make clean    - Remove gh-aw extension"
+	@echo "Available targets:"
+	@echo "  install  - Install the gh-aw extension"
+	@echo "  compile  - Compile active + template workflows"
+	@echo "  setup    - Install extension and compile (default)"
+	@echo "  clean    - Uninstall the extension"
