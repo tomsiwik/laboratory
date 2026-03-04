@@ -1,0 +1,9 @@
+{
+  "name": "@dexters-lab/deedee",
+  "version": "0.1.0",
+  "type": "module",
+  "bin": { "dd": "./src/cli.ts" },
+  "exports": { ".": "./src/index.ts" },
+  "files": ["src", "workflow.md", "doc.md"],
+  "license": "MIT"
+}

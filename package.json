@@ -1,0 +1,8 @@
+{
+  "name": "@dexters-lab/laboratory",
+  "private": true,
+  "workspaces": ["packages/*", "apps/*"],
+  "scripts": {
+    "compile": "gh aw compile"
+  }
+}
