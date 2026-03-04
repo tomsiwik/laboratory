@@ -4,6 +4,7 @@ description: |
   issues with classification and suggested agents. Answers /computress questions
   about the repository. The central intelligence of the team.
 
+engine: claude
 inlined-imports: true
 
 on:

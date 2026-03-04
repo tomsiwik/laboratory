@@ -4,6 +4,7 @@ description: |
   correctness, architecture, performance, and test coverage. Can push fixes
   when asked via `/dexter fix ...`.
 
+engine: claude
 inlined-imports: true
 
 on:

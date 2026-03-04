@@ -4,6 +4,7 @@ description: |
   Wednesday mornings to detect dead code, clean imports, flag oversized files,
   audit stale TODOs, and check doc freshness. Creates cleanup PRs or issues.
 
+engine: claude
 inlined-imports: true
 
 on:

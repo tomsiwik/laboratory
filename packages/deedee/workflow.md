@@ -4,6 +4,7 @@ description: |
   with a ruthless eye for simplification. Celebrates deletion and questions
   every abstraction.
 
+engine: claude
 inlined-imports: true
 
 on:

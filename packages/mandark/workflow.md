@@ -4,6 +4,7 @@ description: |
   hunting for vulnerabilities, edge cases, race conditions, and injection
   vectors. Invoked on-demand to avoid triple-review noise.
 
+engine: claude
 inlined-imports: true
 
 on:

@@ -4,6 +4,7 @@ description: |
   Monday mornings to audit outdated dependencies, CVEs, license issues,
   and lock file health. Creates structured issue reports with terrible puns.
 
+engine: claude
 inlined-imports: true
 
 on:
