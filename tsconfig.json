@@ -12,5 +12,5 @@
       "@dexters-lab/*": ["./packages/*/src"]
     }
   },
-  "include": ["packages/*/src/**/*.ts"]
+  "include": ["packages/*/src/**/*.ts", "apps/*/app/**/*.ts", "apps/*/app/**/*.tsx", "apps/*/lib/**/*.ts", "apps/*/workflow/**/*.ts"]
 }

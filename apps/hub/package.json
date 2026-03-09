@@ -1,0 +1,41 @@
+{
+  "name": "@dexters-lab/hub",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^16",
+    "react": "^19",
+    "react-dom": "^19",
+    "server-only": "^0.0.1",
+    "chat": "^4.15",
+    "@chat-adapter/github": "^4.15",
+    "@chat-adapter/state-redis": "^4.15",
+    "@chat-adapter/state-memory": "^4.15",
+    "octokit": "^5",
+    "ai": "^6",
+    "@ai-sdk/anthropic": "latest",
+    "@workflow/ai": "4.0.1-beta.54",
+    "workflow": "4.2.0-beta.65",
+    "@vercel/sandbox": "^1.7",
+    "@t3-oss/env-nextjs": "latest",
+    "zod": "^4",
+    "@dexters-lab/dexter": "workspace:*",
+    "@dexters-lab/deedee": "workspace:*",
+    "@dexters-lab/mandark": "workspace:*",
+    "@dexters-lab/dad": "workspace:*",
+    "@dexters-lab/mom": "workspace:*",
+    "@dexters-lab/computress": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^5"
+  }
+}
