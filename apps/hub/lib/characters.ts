@@ -21,7 +21,7 @@ interface AgentConfig {
 export type Character = AgentConfig & { avatar: string };
 
 function withAvatar(agent: AgentConfig): Character {
-  return { ...agent, avatar: `${BASE_URL}/${agent.name}.png` };
+  return { ...agent, avatar: `${BASE_URL}/${agent.name}.svg` };
 }
 
 export const characters = {
