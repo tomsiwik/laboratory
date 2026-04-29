@@ -5,14 +5,11 @@ import { getInstallationOctokit } from "@/lib/github";
 import { characters, type CharacterName } from "@/lib/characters";
 import { runCharacterAgent } from "@/lib/agent";
 import { formatResponse } from "@/lib/format";
-import type { ThreadMessage } from "@/lib/bot";
-
 export interface WorkflowParams {
   baseBranch: string;
   prBranch: string;
   prNumber: number;
   repoFullName: string;
-  messages: ThreadMessage[];
   threadId: string;
   characterName: string;
   instruction: string;

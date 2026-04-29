@@ -21,7 +21,7 @@ interface AgentConfig {
 export type Character = AgentConfig & { avatar: string };
 
 function withAvatar(agent: AgentConfig): Character {
-  return { ...agent, avatar: `${BASE_URL}/${agent.name}.png` };
+  return { ...agent, avatar: `${BASE_URL}/${agent.name}.svg` };
 }
 
 export const characters = {
@@ -34,9 +34,5 @@ export const characters = {
 } as const;
 
 export type CharacterName = keyof typeof characters;
-
-export const commandMap: Record<string, Character> = Object.fromEntries(
-  Object.values(characters).map((c) => [c.command, c])
-);
 
 export const defaultCharacter = characters.computress;
