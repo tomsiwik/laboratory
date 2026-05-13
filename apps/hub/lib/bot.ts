@@ -62,7 +62,6 @@ export async function getBot(): Promise<Chat> {
 
   bot.onNewMention(async (thread, message) => {
     const { character, instruction } = routeMessage(message.text);
-    const messages = await collectMessages(thread);
     const threadState = (await thread.state) as ThreadState | null;
 
     await thread.subscribe();
@@ -73,7 +72,6 @@ export async function getBot(): Promise<Chat> {
         prBranch: threadState?.prBranch ?? "main",
         prNumber: threadState?.prNumber ?? 0,
         repoFullName: threadState?.repoFullName ?? "",
-        messages,
         threadId: thread.channelId,
         characterName: character.name,
         instruction,
@@ -83,7 +81,6 @@ export async function getBot(): Promise<Chat> {
 
   bot.onSubscribedMessage(async (thread, message) => {
     const { character, instruction } = routeMessage(message.text);
-    const messages = await collectMessages(thread);
     const threadState = (await thread.state) as ThreadState | null;
 
     await start(laboratoryWorkflow, [
@@ -92,7 +89,6 @@ export async function getBot(): Promise<Chat> {
         prBranch: threadState?.prBranch ?? "main",
         prNumber: threadState?.prNumber ?? 0,
         repoFullName: threadState?.repoFullName ?? "",
-        messages,
         threadId: thread.channelId,
         characterName: character.name,
         instruction,
@@ -114,7 +110,6 @@ export async function getBot(): Promise<Chat> {
         prBranch: threadState?.prBranch ?? "main",
         prNumber: threadState?.prNumber ?? 0,
         repoFullName: threadState?.repoFullName ?? "",
-        messages,
         threadId: event.thread.channelId,
         characterName: character.name,
         instruction,

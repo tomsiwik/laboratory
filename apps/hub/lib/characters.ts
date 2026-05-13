@@ -35,8 +35,4 @@ export const characters = {
 
 export type CharacterName = keyof typeof characters;
 
-export const commandMap: Record<string, Character> = Object.fromEntries(
-  Object.values(characters).map((c) => [c.command, c])
-);
-
 export const defaultCharacter = characters.computress;
